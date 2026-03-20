@@ -215,7 +215,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Location = new System.Drawing.Point(610, 4);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(132, 29);
+            this.label18.Size = new System.Drawing.Size(109, 24);
             this.label18.TabIndex = 65;
             this.label18.Text = "ຊື່ລູກຄ້າ ຫຼື ເບີໂທ";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,14 +224,14 @@
             // 
             this.txtCustomer.Location = new System.Drawing.Point(730, 1);
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(296, 37);
+            this.txtCustomer.Size = new System.Drawing.Size(296, 31);
             this.txtCustomer.TabIndex = 64;
             // 
             // txtTranNo
             // 
             this.txtTranNo.Location = new System.Drawing.Point(455, 1);
             this.txtTranNo.Name = "txtTranNo";
-            this.txtTranNo.Size = new System.Drawing.Size(149, 37);
+            this.txtTranNo.Size = new System.Drawing.Size(149, 31);
             this.txtTranNo.TabIndex = 63;
             // 
             // label5
@@ -264,7 +264,7 @@
             this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtTo.Location = new System.Drawing.Point(245, 1);
             this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(140, 37);
+            this.dtTo.Size = new System.Drawing.Size(140, 31);
             this.dtTo.TabIndex = 34;
             // 
             // label1
@@ -273,7 +273,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(212, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 29);
+            this.label1.Size = new System.Drawing.Size(27, 24);
             this.label1.TabIndex = 33;
             this.label1.Text = "ຫາ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -284,7 +284,7 @@
             this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFrom.Location = new System.Drawing.Point(71, 1);
             this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(140, 37);
+            this.dtFrom.Size = new System.Drawing.Size(140, 31);
             this.dtFrom.TabIndex = 34;
             // 
             // label10
@@ -293,7 +293,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(0, 6);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 29);
+            this.label10.Size = new System.Drawing.Size(67, 24);
             this.label10.TabIndex = 33;
             this.label10.Text = "ຈາກວັນທີ່";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -351,9 +351,10 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowTemplate.Height = 30;
-            this.dgvData.Size = new System.Drawing.Size(1637, 580);
+            this.dgvData.Size = new System.Drawing.Size(1637, 586);
             this.dgvData.TabIndex = 60;
             this.dgvData.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvData_CellMouseDoubleClick);
+            this.dgvData.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvData_CellMouseUp);
             // 
             // col_tran_id
             // 
@@ -438,7 +439,7 @@
             // 
             // frmSaleSparePartList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1655, 792);

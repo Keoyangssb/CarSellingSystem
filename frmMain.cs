@@ -479,7 +479,7 @@ namespace CarSellingSystem
                 tcl.Refresh();
                 tcl.SelectedTab = newTab;
 
-                frmProfitLoseReport frm = new frmProfitLoseReport();
+                frmProfitLoseReport2 frm = new frmProfitLoseReport2();
                 frm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 frm.TopLevel = false;
 
@@ -487,6 +487,12 @@ namespace CarSellingSystem
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
             }
+        }
+
+        private void btnExpenseCode_Click(object sender, EventArgs e)
+        {
+            frmAddEditExpense frm = new frmAddEditExpense();
+            frm.ShowDialog();
         }
 
 

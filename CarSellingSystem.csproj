@@ -281,6 +281,12 @@
     <Compile Include="ReportForms\frmProfitLoseReport.Designer.cs">
       <DependentUpon>frmProfitLoseReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForms\frmProfitLoseReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\frmProfitLoseReport2.Designer.cs">
+      <DependentUpon>frmProfitLoseReport2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForms\frmReportBuyCar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +334,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportProfitLose.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportProfitLose2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportProfitLose2.rpt</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportSaleCar.cs">
       <AutoGen>True</AutoGen>
@@ -594,6 +605,9 @@
     <EmbeddedResource Include="ReportForms\frmProfitLoseReport.resx">
       <DependentUpon>frmProfitLoseReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\frmProfitLoseReport2.resx">
+      <DependentUpon>frmProfitLoseReport2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportForms\frmReportBuyCar.resx">
       <DependentUpon>frmReportBuyCar.cs</DependentUpon>
     </EmbeddedResource>
@@ -621,6 +635,10 @@
     <EmbeddedResource Include="Reports\ReportProfitLose.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportProfitLose.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportProfitLose2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportProfitLose2.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportSaleCar.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -199,3 +199,4 @@ C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debu
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.Users.frmRoleAccess.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.Users.frmUser.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.csproj.GenerateResource.Cache
+C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmProfitLoseReport2.resources

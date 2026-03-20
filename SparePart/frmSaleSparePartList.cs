@@ -142,5 +142,10 @@ namespace CarSellingSystem.SparePart
             }
         }
 
+        private void dgvData_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
     }
 }

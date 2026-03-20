@@ -125,7 +125,7 @@
             this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtTo.Location = new System.Drawing.Point(245, 1);
             this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(140, 37);
+            this.dtTo.Size = new System.Drawing.Size(140, 31);
             this.dtTo.TabIndex = 34;
             // 
             // label1
@@ -134,7 +134,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(212, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 29);
+            this.label1.Size = new System.Drawing.Size(27, 24);
             this.label1.TabIndex = 33;
             this.label1.Text = "ຫາ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,7 +145,7 @@
             this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFrom.Location = new System.Drawing.Point(71, 1);
             this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(140, 37);
+            this.dtFrom.Size = new System.Drawing.Size(140, 31);
             this.dtFrom.TabIndex = 34;
             // 
             // label10
@@ -154,14 +154,14 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(0, 6);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 29);
+            this.label10.Size = new System.Drawing.Size(67, 24);
             this.label10.TabIndex = 33;
             this.label10.Text = "ຈາກວັນທີ່";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmProfitLoseReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1540, 751);
             this.Controls.Add(this.tableLayoutPanel1);

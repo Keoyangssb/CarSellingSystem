@@ -82,10 +82,12 @@ namespace CarSellingSystem.BuyCar
                     Decimal totalBuyPaid = 0;
                     Decimal totalFeePaid = 0;
                     Decimal totalKotaPaid = 0;
+                    Decimal totalTaxPaid = 0;
 
                     Decimal totalBuyBalance = 0;
                     Decimal totalFeeBalance = 0;
                     Decimal totalKotaBalance = 0;
+                    Decimal totalTaxBalance = 0;
 
                     int buy_transaction_id = Convert.ToInt32(reader["buy_id"]);
 
@@ -109,6 +111,7 @@ namespace CarSellingSystem.BuyCar
                     dgv_data.Rows[rowIndex].Cells["col_fee_price"].Value = Convert.ToDecimal(reader["fee_price"]).ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_kota_price"].Value = Convert.ToDecimal(reader["kota_price"]).ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_sell_price"].Value = Convert.ToDecimal(reader["sale_price"]).ToString(globalVariable.format_currency_usd);
+                    dgv_data.Rows[rowIndex].Cells["col_tax_price"].Value = Convert.ToDecimal(reader["tax_price"]).ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_remark"].Value = reader["remarks"];
                     dgv_data.Rows[rowIndex].Cells["col_user"].Value = reader["created_user"];
                     dgv_data.Rows[rowIndex].Cells["col_status"].Value = reader["status_name"];
@@ -116,18 +119,22 @@ namespace CarSellingSystem.BuyCar
                     totalBuyPaid = db.XSum("pay_amount", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=1 And status_id=1");
                     totalFeePaid = db.XSum("payAmountInUsd", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=2 And status_id=1");
                     totalKotaPaid = db.XSum("payAmountInUsd", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=3 And status_id=1");
+                    totalTaxPaid = db.XSum("payAmountInUsd", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=4 And status_id=1");
 
                     dgv_data.Rows[rowIndex].Cells["col_buy_price_paid"].Value = totalBuyPaid.ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_fee_price_paid"].Value = totalFeePaid.ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_kota_price_paid"].Value = totalKotaPaid.ToString(globalVariable.format_currency_usd);
+                    dgv_data.Rows[rowIndex].Cells["col_tax_price_paid"].Value = totalTaxPaid.ToString(globalVariable.format_currency_usd);
 
                     totalBuyBalance = Convert.ToDecimal(reader["buy_price"]) - totalBuyPaid;
                     totalFeeBalance = Convert.ToDecimal(reader["fee_price"]) - totalFeePaid;
                     totalKotaBalance = Convert.ToDecimal(reader["kota_price"]) - totalKotaPaid;
+                    totalTaxBalance = Convert.ToDecimal(reader["tax_price"]) - totalTaxPaid;
 
                     dgv_data.Rows[rowIndex].Cells["col_buy_price_balance"].Value = totalBuyBalance.ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_fee_price_balance"].Value = totalFeeBalance.ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_kota_price_balance"].Value = totalKotaBalance.ToString(globalVariable.format_currency_usd);
+                    dgv_data.Rows[rowIndex].Cells["col_tax_price_balance"].Value = totalTaxBalance.ToString(globalVariable.format_currency_usd);
 
                     dgv_data.Rows[rowIndex].Cells["col_item_del"].Value = "ລົບອອກ";
                 }

@@ -66,6 +66,7 @@
             this.btnReportTotalCashTransfer = new DevComponents.DotNetBar.ButtonX();
             this.tcl = new DevComponents.DotNetBar.TabControl();
             this.ExpandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
+            this.btnExpenseCode = new DevComponents.DotNetBar.ButtonX();
             this.statusStrip1.SuspendLayout();
             this.ExpandablePanel1.SuspendLayout();
             this.FlowLayoutPanel1.SuspendLayout();
@@ -88,29 +89,29 @@
             this.lbl_status_user,
             this.toolStripStatusLabel1,
             this.lbl_status_exchange});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 712);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 595);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1555, 34);
+            this.statusStrip1.Size = new System.Drawing.Size(1555, 29);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lbl_status_user
             // 
             this.lbl_status_user.Name = "lbl_status_user";
-            this.lbl_status_user.Size = new System.Drawing.Size(164, 29);
+            this.lbl_status_user.Size = new System.Drawing.Size(129, 24);
             this.lbl_status_user.Text = "Log in by: Admin";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(18, 29);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(14, 24);
             this.toolStripStatusLabel1.Text = "|";
             // 
             // lbl_status_exchange
             // 
             this.lbl_status_exchange.Name = "lbl_status_exchange";
-            this.lbl_status_exchange.Size = new System.Drawing.Size(539, 29);
+            this.lbl_status_exchange.Size = new System.Drawing.Size(437, 24);
             this.lbl_status_exchange.Text = "ອັດຕາແລກປ່ຽນ: ກີບ-ບາດ: 650 | ກີບ-ໂດລາ: 21,600 | ບາດ-ໂດລາ: 32 ";
             // 
             // ExpandablePanel1
@@ -124,7 +125,7 @@
             this.ExpandablePanel1.Location = new System.Drawing.Point(0, 0);
             this.ExpandablePanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ExpandablePanel1.Name = "ExpandablePanel1";
-            this.ExpandablePanel1.Size = new System.Drawing.Size(207, 712);
+            this.ExpandablePanel1.Size = new System.Drawing.Size(207, 595);
             this.ExpandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.ExpandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.ExpandablePanel1.Style.BackColor2.Color = System.Drawing.Color.DodgerBlue;
@@ -158,7 +159,7 @@
             this.FlowLayoutPanel1.Location = new System.Drawing.Point(0, 44);
             this.FlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.FlowLayoutPanel1.Name = "FlowLayoutPanel1";
-            this.FlowLayoutPanel1.Size = new System.Drawing.Size(207, 668);
+            this.FlowLayoutPanel1.Size = new System.Drawing.Size(207, 551);
             this.FlowLayoutPanel1.TabIndex = 1;
             // 
             // expExchangeTreasury
@@ -447,6 +448,7 @@
             // 
             this.expSetting.CanvasColor = System.Drawing.SystemColors.Control;
             this.expSetting.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.expSetting.Controls.Add(this.btnExpenseCode);
             this.expSetting.Controls.Add(this.btnRoleAccess);
             this.expSetting.Controls.Add(this.btnUser);
             this.expSetting.Controls.Add(this.btnSparePart);
@@ -455,7 +457,7 @@
             this.expSetting.Controls.Add(this.frmExchangeRate);
             this.expSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expSetting.Expanded = false;
-            this.expSetting.ExpandedBounds = new System.Drawing.Rectangle(4, 242, 199, 363);
+            this.expSetting.ExpandedBounds = new System.Drawing.Rectangle(4, 242, 199, 407);
             this.expSetting.ExpandOnTitleClick = true;
             this.expSetting.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expSetting.Location = new System.Drawing.Point(4, 242);
@@ -485,7 +487,7 @@
             // 
             this.btnRoleAccess.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRoleAccess.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnRoleAccess.Location = new System.Drawing.Point(4, 308);
+            this.btnRoleAccess.Location = new System.Drawing.Point(4, 354);
             this.btnRoleAccess.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRoleAccess.Name = "btnRoleAccess";
             this.btnRoleAccess.Size = new System.Drawing.Size(188, 46);
@@ -498,7 +500,7 @@
             // 
             this.btnUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnUser.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnUser.Location = new System.Drawing.Point(4, 256);
+            this.btnUser.Location = new System.Drawing.Point(4, 304);
             this.btnUser.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(188, 46);
@@ -702,7 +704,7 @@
             this.tcl.Name = "tcl";
             this.tcl.SelectedTabFont = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.tcl.SelectedTabIndex = 0;
-            this.tcl.Size = new System.Drawing.Size(1348, 712);
+            this.tcl.Size = new System.Drawing.Size(1348, 595);
             this.tcl.TabIndex = 9;
             this.tcl.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tcl.Text = "Add Tab";
@@ -732,18 +734,31 @@
             this.ExpandableSplitter1.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.ExpandableSplitter1.HotGripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.ExpandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.ExpandableSplitter1.Location = new System.Drawing.Point(0, 35);
+            this.ExpandableSplitter1.Location = new System.Drawing.Point(0, 30);
             this.ExpandableSplitter1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExpandableSplitter1.Name = "ExpandableSplitter1";
-            this.ExpandableSplitter1.Size = new System.Drawing.Size(4, 677);
+            this.ExpandableSplitter1.Size = new System.Drawing.Size(4, 565);
             this.ExpandableSplitter1.TabIndex = 1;
             this.ExpandableSplitter1.TabStop = false;
             // 
+            // btnExpenseCode
+            // 
+            this.btnExpenseCode.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnExpenseCode.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnExpenseCode.Location = new System.Drawing.Point(4, 254);
+            this.btnExpenseCode.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnExpenseCode.Name = "btnExpenseCode";
+            this.btnExpenseCode.Size = new System.Drawing.Size(188, 46);
+            this.btnExpenseCode.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            this.btnExpenseCode.TabIndex = 18;
+            this.btnExpenseCode.Text = "ຂໍ້ມູນລາຍຈ່າຍລວມ";
+            this.btnExpenseCode.Click += new System.EventHandler(this.btnExpenseCode_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1555, 746);
+            this.ClientSize = new System.Drawing.Size(1555, 624);
             this.Controls.Add(this.tcl);
             this.Controls.Add(this.ExpandablePanel1);
             this.Controls.Add(this.statusStrip1);
@@ -814,6 +829,7 @@
         internal DevComponents.DotNetBar.ButtonX btnProfitLoseReport;
         internal DevComponents.DotNetBar.ButtonX btnExpenseReport;
         internal DevComponents.DotNetBar.ButtonX btnSaleSSPReport;
+        internal DevComponents.DotNetBar.ButtonX btnExpenseCode;
 
     }
 }

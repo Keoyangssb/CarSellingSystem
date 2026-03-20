@@ -78,6 +78,9 @@
             this.col_kota_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_kota_price_paid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_kota_price_balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_tax_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_tax_price_paid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_tax_price_balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_sell_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -243,7 +246,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(1035, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 29);
+            this.label5.Size = new System.Drawing.Size(57, 24);
             this.label5.TabIndex = 42;
             this.label5.Text = "ສະຖານະ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -254,7 +257,7 @@
             this.cboStatus.FormattingEnabled = true;
             this.cboStatus.Location = new System.Drawing.Point(1106, 5);
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(118, 37);
+            this.cboStatus.Size = new System.Drawing.Size(118, 32);
             this.cboStatus.TabIndex = 43;
             // 
             // btnSearch
@@ -277,7 +280,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(408, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 29);
+            this.label2.Size = new System.Drawing.Size(31, 24);
             this.label2.TabIndex = 35;
             this.label2.Text = "ຍີ່ຫໍ່";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -288,7 +291,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(652, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 29);
+            this.label3.Size = new System.Drawing.Size(30, 24);
             this.label3.TabIndex = 36;
             this.label3.Text = "ລູ້ນ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,7 +302,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(881, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 29);
+            this.label4.Size = new System.Drawing.Size(55, 24);
             this.label4.TabIndex = 37;
             this.label4.Text = "ປີຜະລິດ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -310,7 +313,7 @@
             this.cboMake.FormattingEnabled = true;
             this.cboMake.Location = new System.Drawing.Point(446, 5);
             this.cboMake.Name = "cboMake";
-            this.cboMake.Size = new System.Drawing.Size(202, 37);
+            this.cboMake.Size = new System.Drawing.Size(202, 32);
             this.cboMake.TabIndex = 38;
             this.cboMake.SelectedIndexChanged += new System.EventHandler(this.cboMake_SelectedIndexChanged);
             // 
@@ -320,7 +323,7 @@
             this.cboModel.FormattingEnabled = true;
             this.cboModel.Location = new System.Drawing.Point(689, 5);
             this.cboModel.Name = "cboModel";
-            this.cboModel.Size = new System.Drawing.Size(189, 37);
+            this.cboModel.Size = new System.Drawing.Size(189, 32);
             this.cboModel.TabIndex = 39;
             // 
             // cboYear
@@ -329,7 +332,7 @@
             this.cboYear.FormattingEnabled = true;
             this.cboYear.Location = new System.Drawing.Point(947, 5);
             this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(85, 37);
+            this.cboYear.Size = new System.Drawing.Size(85, 32);
             this.cboYear.TabIndex = 40;
             // 
             // to_date
@@ -338,7 +341,7 @@
             this.to_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.to_date.Location = new System.Drawing.Point(258, 5);
             this.to_date.Name = "to_date";
-            this.to_date.Size = new System.Drawing.Size(147, 37);
+            this.to_date.Size = new System.Drawing.Size(147, 31);
             this.to_date.TabIndex = 34;
             // 
             // label1
@@ -347,7 +350,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(221, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 29);
+            this.label1.Size = new System.Drawing.Size(27, 24);
             this.label1.TabIndex = 33;
             this.label1.Text = "ຫາ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -358,7 +361,7 @@
             this.from_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.from_date.Location = new System.Drawing.Point(70, 5);
             this.from_date.Name = "from_date";
-            this.from_date.Size = new System.Drawing.Size(147, 37);
+            this.from_date.Size = new System.Drawing.Size(147, 31);
             this.from_date.TabIndex = 34;
             // 
             // label10
@@ -367,7 +370,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(-2, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 29);
+            this.label10.Size = new System.Drawing.Size(67, 24);
             this.label10.TabIndex = 33;
             this.label10.Text = "ຈາກວັນທີ່";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -433,6 +436,9 @@
             this.col_kota_price,
             this.col_kota_price_paid,
             this.col_kota_price_balance,
+            this.col_tax_price,
+            this.col_tax_price_paid,
+            this.col_tax_price_balance,
             this.col_sell_price,
             this.col_remark,
             this.col_user,
@@ -443,7 +449,7 @@
             this.dgv_data.Name = "dgv_data";
             this.dgv_data.ReadOnly = true;
             this.dgv_data.RowTemplate.Height = 30;
-            this.dgv_data.Size = new System.Drawing.Size(1773, 569);
+            this.dgv_data.Size = new System.Drawing.Size(1773, 575);
             this.dgv_data.TabIndex = 25;
             this.dgv_data.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_data_CellMouseDoubleClick);
             this.dgv_data.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_data_CellMouseUp);
@@ -608,6 +614,24 @@
             this.col_kota_price_balance.Name = "col_kota_price_balance";
             this.col_kota_price_balance.ReadOnly = true;
             // 
+            // col_tax_price
+            // 
+            this.col_tax_price.HeaderText = "ຄ່າພາສີ";
+            this.col_tax_price.Name = "col_tax_price";
+            this.col_tax_price.ReadOnly = true;
+            // 
+            // col_tax_price_paid
+            // 
+            this.col_tax_price_paid.HeaderText = "ຈ່າຍແລ້ວ";
+            this.col_tax_price_paid.Name = "col_tax_price_paid";
+            this.col_tax_price_paid.ReadOnly = true;
+            // 
+            // col_tax_price_balance
+            // 
+            this.col_tax_price_balance.HeaderText = "ຍັງເຫຼືອ";
+            this.col_tax_price_balance.Name = "col_tax_price_balance";
+            this.col_tax_price_balance.ReadOnly = true;
+            // 
             // col_sell_price
             // 
             this.col_sell_price.HeaderText = "ລາຄາຂາຍ";
@@ -646,7 +670,7 @@
             // 
             // frmBuyCarList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1791, 789);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -691,6 +715,7 @@
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboStatus;
+        private System.Windows.Forms.ComboBox cboMake;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_buy_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_make;
@@ -715,12 +740,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_kota_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_kota_price_paid;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_kota_price_balance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_tax_price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_tax_price_paid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_tax_price_balance;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_sell_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_remark;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_user;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_status;
         private System.Windows.Forms.DataGridViewButtonColumn col_item_del;
-        private System.Windows.Forms.ComboBox cboMake;
 
     }
 }

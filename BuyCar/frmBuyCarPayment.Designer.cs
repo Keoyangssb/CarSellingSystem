@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dgvData = new System.Windows.Forms.DataGridView();
@@ -44,6 +44,8 @@
             this.col_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_item_del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.dt_paid = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cboCurrency_pay_kota = new System.Windows.Forms.ComboBox();
             this.cboCurrency_pay_fee = new System.Windows.Forms.ComboBox();
@@ -76,8 +78,14 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtTotalFee = new System.Windows.Forms.TextBox();
             this.txtTotalBuy = new System.Windows.Forms.TextBox();
-            this.dt_paid = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
+            this.cboCurrency_pay_tax = new System.Windows.Forms.ComboBox();
+            this.cboTotalTax_payType = new System.Windows.Forms.ComboBox();
+            this.cboTotalTax_payer = new System.Windows.Forms.ComboBox();
+            this.txtTotalTax_balance = new System.Windows.Forms.TextBox();
+            this.txtTotalTax_paid = new System.Windows.Forms.TextBox();
+            this.txtTotalTax_paying = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTotalTax = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -94,7 +102,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 257F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 288F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1355, 799);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -105,9 +113,9 @@
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel2.Controls.Add(this.dgvData);
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel2.Location = new System.Drawing.Point(3, 260);
+            this.groupPanel2.Location = new System.Drawing.Point(3, 291);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(1349, 536);
+            this.groupPanel2.Size = new System.Drawing.Size(1349, 505);
             // 
             // 
             // 
@@ -151,7 +159,7 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowTemplate.Height = 30;
-            this.dgvData.Size = new System.Drawing.Size(1343, 504);
+            this.dgvData.Size = new System.Drawing.Size(1343, 473);
             this.dgvData.TabIndex = 25;
             this.dgvData.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvData_CellMouseUp);
             // 
@@ -163,8 +171,8 @@
             // 
             // col_item_no
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.col_item_no.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.col_item_no.DefaultCellStyle = dataGridViewCellStyle3;
             this.col_item_no.HeaderText = "ລ/ດ";
             this.col_item_no.Name = "col_item_no";
             this.col_item_no.Width = 50;
@@ -177,8 +185,8 @@
             // 
             // col_pay_des
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.col_pay_des.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.col_pay_des.DefaultCellStyle = dataGridViewCellStyle4;
             this.col_pay_des.HeaderText = "ລາຍການຊຳລະ";
             this.col_pay_des.Name = "col_pay_des";
             this.col_pay_des.Width = 150;
@@ -222,6 +230,14 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.cboCurrency_pay_tax);
+            this.groupPanel1.Controls.Add(this.cboTotalTax_payType);
+            this.groupPanel1.Controls.Add(this.cboTotalTax_payer);
+            this.groupPanel1.Controls.Add(this.txtTotalTax_balance);
+            this.groupPanel1.Controls.Add(this.txtTotalTax_paid);
+            this.groupPanel1.Controls.Add(this.txtTotalTax_paying);
+            this.groupPanel1.Controls.Add(this.label7);
+            this.groupPanel1.Controls.Add(this.txtTotalTax);
             this.groupPanel1.Controls.Add(this.dt_paid);
             this.groupPanel1.Controls.Add(this.label8);
             this.groupPanel1.Controls.Add(this.label6);
@@ -259,7 +275,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(3, 3);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1349, 251);
+            this.groupPanel1.Size = new System.Drawing.Size(1349, 282);
             // 
             // 
             // 
@@ -281,6 +297,24 @@
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "ບັນທຶກການຊຳລະເງິນ";
+            // 
+            // dt_paid
+            // 
+            this.dt_paid.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_paid.Location = new System.Drawing.Point(106, 179);
+            this.dt_paid.Name = "dt_paid";
+            this.dt_paid.Size = new System.Drawing.Size(150, 31);
+            this.dt_paid.TabIndex = 59;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Orange;
+            this.label8.Location = new System.Drawing.Point(9, 180);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 30);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "ວັນທີ່ຈ່າຍ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -364,7 +398,7 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Phetsarath OT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1185, 144);
+            this.btnClose.Location = new System.Drawing.Point(1185, 181);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 64);
             this.btnClose.TabIndex = 4;
@@ -444,7 +478,7 @@
             this.btnSave.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Phetsarath OT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(1029, 144);
+            this.btnSave.Location = new System.Drawing.Point(1029, 181);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 64);
             this.btnSave.TabIndex = 3;
@@ -590,23 +624,78 @@
             this.txtTotalBuy.TabIndex = 23;
             this.txtTotalBuy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dt_paid
+            // cboCurrency_pay_tax
             // 
-            this.dt_paid.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_paid.Location = new System.Drawing.Point(106, 142);
-            this.dt_paid.Name = "dt_paid";
-            this.dt_paid.Size = new System.Drawing.Size(150, 31);
-            this.dt_paid.TabIndex = 59;
+            this.cboCurrency_pay_tax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCurrency_pay_tax.FormattingEnabled = true;
+            this.cboCurrency_pay_tax.Location = new System.Drawing.Point(444, 139);
+            this.cboCurrency_pay_tax.Name = "cboCurrency_pay_tax";
+            this.cboCurrency_pay_tax.Size = new System.Drawing.Size(94, 32);
+            this.cboCurrency_pay_tax.TabIndex = 68;
             // 
-            // label8
+            // cboTotalTax_payType
             // 
-            this.label8.BackColor = System.Drawing.Color.Orange;
-            this.label8.Location = new System.Drawing.Point(9, 143);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 30);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "ວັນທີ່ຈ່າຍ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cboTotalTax_payType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTotalTax_payType.FormattingEnabled = true;
+            this.cboTotalTax_payType.Location = new System.Drawing.Point(544, 140);
+            this.cboTotalTax_payType.Name = "cboTotalTax_payType";
+            this.cboTotalTax_payType.Size = new System.Drawing.Size(159, 32);
+            this.cboTotalTax_payType.TabIndex = 67;
+            // 
+            // cboTotalTax_payer
+            // 
+            this.cboTotalTax_payer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTotalTax_payer.FormattingEnabled = true;
+            this.cboTotalTax_payer.Location = new System.Drawing.Point(709, 140);
+            this.cboTotalTax_payer.Name = "cboTotalTax_payer";
+            this.cboTotalTax_payer.Size = new System.Drawing.Size(314, 32);
+            this.cboTotalTax_payer.TabIndex = 66;
+            // 
+            // txtTotalTax_balance
+            // 
+            this.txtTotalTax_balance.Location = new System.Drawing.Point(1185, 140);
+            this.txtTotalTax_balance.Name = "txtTotalTax_balance";
+            this.txtTotalTax_balance.ReadOnly = true;
+            this.txtTotalTax_balance.Size = new System.Drawing.Size(150, 31);
+            this.txtTotalTax_balance.TabIndex = 65;
+            this.txtTotalTax_balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTotalTax_paid
+            // 
+            this.txtTotalTax_paid.Location = new System.Drawing.Point(1029, 140);
+            this.txtTotalTax_paid.Name = "txtTotalTax_paid";
+            this.txtTotalTax_paid.ReadOnly = true;
+            this.txtTotalTax_paid.Size = new System.Drawing.Size(150, 31);
+            this.txtTotalTax_paid.TabIndex = 64;
+            this.txtTotalTax_paid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTotalTax_paying
+            // 
+            this.txtTotalTax_paying.Location = new System.Drawing.Point(262, 140);
+            this.txtTotalTax_paying.Name = "txtTotalTax_paying";
+            this.txtTotalTax_paying.Size = new System.Drawing.Size(176, 31);
+            this.txtTotalTax_paying.TabIndex = 61;
+            this.txtTotalTax_paying.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalTax_paying.Leave += new System.EventHandler(this.txtTotalTax_paying_Leave);
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(17, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 29);
+            this.label7.TabIndex = 63;
+            this.label7.Text = "ຄ່າພາສີ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtTotalTax
+            // 
+            this.txtTotalTax.Location = new System.Drawing.Point(106, 140);
+            this.txtTotalTax.Name = "txtTotalTax";
+            this.txtTotalTax.ReadOnly = true;
+            this.txtTotalTax.Size = new System.Drawing.Size(150, 31);
+            this.txtTotalTax.TabIndex = 62;
+            this.txtTotalTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmBuyCarPayment
             // 
@@ -681,5 +770,13 @@
         private System.Windows.Forms.DataGridViewButtonColumn col_item_del;
         private System.Windows.Forms.DateTimePicker dt_paid;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cboCurrency_pay_tax;
+        private System.Windows.Forms.ComboBox cboTotalTax_payType;
+        private System.Windows.Forms.ComboBox cboTotalTax_payer;
+        private System.Windows.Forms.TextBox txtTotalTax_balance;
+        private System.Windows.Forms.TextBox txtTotalTax_paid;
+        private System.Windows.Forms.TextBox txtTotalTax_paying;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtTotalTax;
     }
 }

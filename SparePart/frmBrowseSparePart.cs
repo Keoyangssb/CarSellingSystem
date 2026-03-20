@@ -68,8 +68,8 @@ namespace CarSellingSystem.SparePart
                     dgv_data.Rows[rowIndex].Cells["col_buy_price"].Value = Convert.ToDecimal(reader["buy_price"]).ToString(globalVariable.format_currency_usd);
                     dgv_data.Rows[rowIndex].Cells["col_buy_cur"].Value = reader["cur_name"];
                     dgv_data.Rows[rowIndex].Cells["col_sell_price"].Value = Convert.ToDecimal(reader["sell_price"]).ToString(globalVariable.format_currency_usd);
-                    //dgv_data.Rows[rowIndex].Cells["col_sell_cur"].Value = reader["sell_currency"];
-
+                    string sell_curr = db.XLookup("cur_name", "tbl_currency", "cur_id=" + reader["sell_currency_id"]);
+                    dgv_data.Rows[rowIndex].Cells["col_sell_cur"].Value = sell_curr;
                     dgv_data.Rows[rowIndex].Cells["col_select"].Value = "ເລືອກເອົາ";
                 }
                 reader.Close();

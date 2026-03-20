@@ -56,8 +56,9 @@
             this.txtUserName.Location = new System.Drawing.Point(411, 66);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(323, 41);
+            this.txtUserName.Size = new System.Drawing.Size(323, 35);
             this.txtUserName.TabIndex = 0;
+            this.txtUserName.Text = "admin";
             this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
             // txtUserPass
@@ -66,8 +67,9 @@
             this.txtUserPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserPass.Name = "txtUserPass";
             this.txtUserPass.PasswordChar = '*';
-            this.txtUserPass.Size = new System.Drawing.Size(323, 41);
+            this.txtUserPass.Size = new System.Drawing.Size(323, 35);
             this.txtUserPass.TabIndex = 1;
+            this.txtUserPass.Text = "1";
             this.txtUserPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserPass_KeyDown);
             // 
             // btnLogin
@@ -87,7 +89,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(405, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 35);
+            this.label1.Size = new System.Drawing.Size(23, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "ຊື່";
             // 
@@ -96,13 +98,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(405, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 35);
+            this.label2.Size = new System.Drawing.Size(54, 28);
             this.label2.TabIndex = 5;
             this.label2.Text = "ລະຫັດ";
             // 
             // frmUserLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 34F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(770, 319);

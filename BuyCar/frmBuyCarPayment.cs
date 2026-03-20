@@ -24,10 +24,12 @@ namespace CarSellingSystem.BuyCar
         Decimal totalBuyPaid = 0;
         Decimal totalFeePaid = 0;
         Decimal totalKotaPaid = 0;
+        Decimal totalTaxPaid = 0;
 
         Decimal totalBuyBalance = 0;
         Decimal totalFeeBalance = 0;
         Decimal totalKotaBalance = 0;
+        Decimal totalTaxBalance = 0;
 
         bool is_first_load = true;
 
@@ -38,17 +40,22 @@ namespace CarSellingSystem.BuyCar
             db.FillCombo(cboTotalBuy_payer, "tbl_user_payer", "payer_name", "payer_id", "status_id=1", "payer_id", false);
             db.FillCombo(cboTotalFee_payer, "tbl_user_payer", "payer_name", "payer_id", "status_id=1", "payer_id", false);
             db.FillCombo(cboTotalKota_payer, "tbl_user_payer", "payer_name", "payer_id", "status_id=1", "payer_id", false);
+            db.FillCombo(cboTotalTax_payer, "tbl_user_payer", "payer_name", "payer_id", "status_id=1", "payer_id", false);
+
             db.FillCombo(cboTotalBuy_payType, "tbl_pay_type", "pay_type_name", "pay_type_id", "status_id=1", "pay_type_id", false);
             db.FillCombo(cboTotalFee_payType, "tbl_pay_type", "pay_type_name", "pay_type_id", "status_id=1", "pay_type_id", false);
             db.FillCombo(cboTotalKota_payType, "tbl_pay_type", "pay_type_name", "pay_type_id", "status_id=1", "pay_type_id", false);
+            db.FillCombo(cboTotalTax_payType, "tbl_pay_type", "pay_type_name", "pay_type_id", "status_id=1", "pay_type_id", false);
 
             db.FillCombo(cboCurrency_pay_car, "tbl_currency", "cur_name", "cur_id", "status_id=1", "", false);
             db.FillCombo(cboCurrency_pay_fee, "tbl_currency", "cur_name", "cur_id", "status_id=1", "", false);
             db.FillCombo(cboCurrency_pay_kota, "tbl_currency", "cur_name", "cur_id", "status_id=1", "", false);
+            db.FillCombo(cboCurrency_pay_tax, "tbl_currency", "cur_name", "cur_id", "status_id=1", "", false);
 
             cboCurrency_pay_car.SelectedValue = 3;
             cboCurrency_pay_fee.SelectedValue = 3;
             cboCurrency_pay_kota.SelectedValue = 3;
+            cboCurrency_pay_tax.SelectedValue = 3;
 
             getCalcPayment();
             getPaymentHistory();
@@ -79,14 +86,17 @@ namespace CarSellingSystem.BuyCar
                         txtTotalBuy.Text = Convert.ToDecimal(reader["buy_price"]).ToString(globalVariable.format_currency_usd);
                         txtTotalFee.Text = Convert.ToDecimal(reader["fee_price"]).ToString(globalVariable.format_currency_usd);
                         txtTotalKota.Text = Convert.ToDecimal(reader["kota_price"]).ToString(globalVariable.format_currency_usd);
+                        txtTotalTax.Text = Convert.ToDecimal(reader["tax_price"]).ToString(globalVariable.format_currency_usd);
 
                         totalBuyPaid = db.XSum("payAmountInUsd", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=1 And status_id=1");
                         totalFeePaid = db.XSum("payAmountInUsd", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=2 And status_id=1");
                         totalKotaPaid = db.XSum("payAmountInUsd", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=3 And status_id=1");
+                        totalTaxPaid = db.XSum("payAmountInUsd", "tbl_buy_cars_payment", "buy_id=" + buy_transaction_id + " And pay_item_id=4 And status_id=1");
 
                         totalBuyBalance = Convert.ToDecimal(reader["buy_price"]) - totalBuyPaid;
                         totalFeeBalance = Convert.ToDecimal(reader["fee_price"]) - totalFeePaid;
                         totalKotaBalance = Convert.ToDecimal(reader["kota_price"]) - totalKotaPaid;
+                        totalTaxBalance = Convert.ToDecimal(reader["tax_price"]) - totalTaxPaid;
 
                         txtTotalBuy_paid.Text = totalBuyPaid.ToString(globalVariable.format_currency_usd);
                         txtTotalBuy_balance.Text = totalBuyBalance.ToString(globalVariable.format_currency_usd);
@@ -96,6 +106,9 @@ namespace CarSellingSystem.BuyCar
 
                         txtTotalKota_paid.Text = totalKotaPaid.ToString(globalVariable.format_currency_usd);
                         txtTotalKota_balance.Text = totalKotaBalance.ToString(globalVariable.format_currency_usd);
+
+                        txtTotalTax_paid.Text = totalTaxPaid.ToString(globalVariable.format_currency_usd);
+                        txtTotalTax_balance.Text = totalTaxBalance.ToString(globalVariable.format_currency_usd);
 
                         if (Convert.ToDecimal(reader["buy_price"]) == 0 || totalBuyBalance == 0)
                         {
@@ -113,10 +126,11 @@ namespace CarSellingSystem.BuyCar
                             cboTotalKota_payer.Enabled = false;
                         }
 
-                        if (totalBuyBalance == 0 && totalFeeBalance == 0 && totalKotaBalance == 0)
+                        if (totalBuyBalance == 0 && totalFeeBalance == 0 && totalKotaBalance == 0 && totalTaxBalance == 0)
                         {
                             btnSave.Enabled = false;
                         }
+
 
                     }
                 }
@@ -180,8 +194,9 @@ namespace CarSellingSystem.BuyCar
             double payCarAmount = db.ToNumber(txtTotalBuy_paying.Text);
             double payFeeAmount = db.ToNumber(txtTotalFee_paying.Text);
             double payKotaAmount = db.ToNumber(txtTotalKota_paying.Text);
+            double payTaxAmount = db.ToNumber(txtTotalTax_paying.Text);
 
-            if (payCarAmount == 0 && payFeeAmount == 0 && payKotaAmount == 0)
+            if (payCarAmount == 0 && payFeeAmount == 0 && payKotaAmount == 0 && payTaxAmount == 0)
             {
                 MessageBox.Show("ກະລຸນາປ້ອນຈຳນວນເງິນຊຳລະກ່ອນ.");
                 txtTotalBuy_paying.Focus();
@@ -313,10 +328,45 @@ namespace CarSellingSystem.BuyCar
                         cmd.Parameters.AddWithValue("@created_user", globalVariable.g_user_name);
                         int rowsAffected = cmd.ExecuteNonQuery();
                     }
+
+                    paid_amount_in_usd = 0;
+
+                    if (payTaxAmount > 0)
+                    {
+                        pay_currency_id = Convert.ToInt32(cboCurrency_pay_tax.SelectedValue);
+                        if (pay_currency_id != 3)
+                        {
+                            paid_amount_in_usd = db.C2USD(pay_currency_id, payTaxAmount);
+                        }
+                        else
+                        {
+                            paid_amount_in_usd = payTaxAmount;
+                        }
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.Parameters.AddWithValue("@buy_id", buy_transaction_id);
+                        cmd.Parameters.AddWithValue("@payer_id", cboTotalTax_payer.SelectedValue);
+                        cmd.Parameters.AddWithValue("@payer_name", cboTotalTax_payer.Text);
+                        cmd.Parameters.AddWithValue("@pay_date", dt_paid.Value);
+                        cmd.Parameters.AddWithValue("@pay_item_id", 4);
+                        cmd.Parameters.AddWithValue("@pay_item_name", "ຈ່າຍຄ່າພາສີ");
+                        cmd.Parameters.AddWithValue("@pay_amount", payTaxAmount);
+                        cmd.Parameters.AddWithValue("@pay_type_id", cboTotalTax_payType.SelectedValue);
+                        cmd.Parameters.AddWithValue("@pay_type_name", cboTotalTax_payType.Text);
+                        cmd.Parameters.AddWithValue("@rate_kip2usd", exc_kip_usd);
+                        cmd.Parameters.AddWithValue("@rate_bath2usd", exc_bath_usd);
+                        cmd.Parameters.AddWithValue("@payCurrencyId", pay_currency_id);
+                        cmd.Parameters.AddWithValue("@payAmountInUsd", paid_amount_in_usd);
+                        cmd.Parameters.AddWithValue("@status_id", 1);
+                        cmd.Parameters.AddWithValue("@created_date", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@created_user", globalVariable.g_user_name);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                    }
+
                     MessageBox.Show("ບັນທຶກສຳເລັດແລ້ວ.");
                     txtTotalBuy_paying.Text = "";
                     txtTotalFee_paying.Text = "";
                     txtTotalKota_paying.Text = "";
+                    txtTotalTax_paying.Text = "";
                     conn.Close();
                     getCalcPayment();
                     getPaymentHistory();
@@ -465,6 +515,25 @@ namespace CarSellingSystem.BuyCar
 
             txtTotalKota_paid.Text = totalPaid.ToString(globalVariable.format_currency_usd);
             txtTotalKota_balance.Text = totalBalance.ToString(globalVariable.format_currency_usd);
+        }
+
+        private void txtTotalTax_paying_Leave(object sender, EventArgs e)
+        {
+            double c_amount = db.ToNumber(txtTotalTax_paying.Text);
+            txtTotalTax_paying.Text = c_amount.ToString(globalVariable.format_currency_usd);
+            Decimal totalAmount = Convert.ToDecimal(txtTotalTax.Text);
+
+            int pay_cur_id = Convert.ToInt32(cboCurrency_pay_tax.SelectedValue);
+            if (pay_cur_id != 3)
+            {
+                c_amount = db.C2USD(pay_cur_id, c_amount);
+            }
+
+            Decimal totalPaid = Convert.ToDecimal(c_amount) + totalTaxPaid;
+            Decimal totalBalance = totalAmount - totalPaid;
+
+            txtTotalTax_paid.Text = totalPaid.ToString(globalVariable.format_currency_usd);
+            txtTotalTax_balance.Text = totalBalance.ToString(globalVariable.format_currency_usd);
         }
 
 
