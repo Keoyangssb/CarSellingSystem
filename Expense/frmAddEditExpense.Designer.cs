@@ -132,7 +132,7 @@
             // 
             this.txtName_filter.Location = new System.Drawing.Point(539, 29);
             this.txtName_filter.Name = "txtName_filter";
-            this.txtName_filter.Size = new System.Drawing.Size(291, 37);
+            this.txtName_filter.Size = new System.Drawing.Size(291, 31);
             this.txtName_filter.TabIndex = 51;
             // 
             // btnSearch
@@ -155,7 +155,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(3, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 29);
+            this.label10.Size = new System.Drawing.Size(102, 24);
             this.label10.TabIndex = 44;
             this.label10.Text = "ປະເພດລາຍຈ່າຍ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -166,7 +166,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Location = new System.Drawing.Point(462, 33);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 29);
+            this.label12.Size = new System.Drawing.Size(71, 24);
             this.label12.TabIndex = 46;
             this.label12.Text = "ຊື່ລາຍຈ່າຍ";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -177,7 +177,7 @@
             this.cboTypeFilter.FormattingEnabled = true;
             this.cboTypeFilter.Location = new System.Drawing.Point(104, 28);
             this.cboTypeFilter.Name = "cboTypeFilter";
-            this.cboTypeFilter.Size = new System.Drawing.Size(356, 37);
+            this.cboTypeFilter.Size = new System.Drawing.Size(356, 32);
             this.cboTypeFilter.TabIndex = 47;
             // 
             // groupBox1
@@ -279,7 +279,7 @@
             this.cboType.FormattingEnabled = true;
             this.cboType.Location = new System.Drawing.Point(13, 81);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(507, 37);
+            this.cboType.Size = new System.Drawing.Size(507, 32);
             this.cboType.TabIndex = 1;
             // 
             // label17
@@ -296,7 +296,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(13, 159);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(544, 37);
+            this.txtName.Size = new System.Drawing.Size(544, 31);
             this.txtName.TabIndex = 2;
             // 
             // col_item_id
@@ -335,11 +335,12 @@
             this.col_item_del.HeaderText = "ລົບອອກ";
             this.col_item_del.Name = "col_item_del";
             this.col_item_del.ReadOnly = true;
+            this.col_item_del.Visible = false;
             this.col_item_del.Width = 72;
             // 
             // frmAddEditExpense
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1695, 747);
             this.Controls.Add(this.tableLayoutPanel1);

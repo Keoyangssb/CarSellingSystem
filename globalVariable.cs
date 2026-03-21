@@ -33,6 +33,12 @@ namespace CarSellingSystem
 
         public static int selling_customer_id = 0;
 
+        public static bool can_add = false;
+        public static bool can_edit = false;
+        public static bool can_view = false;
+        public static bool can_delete = false;
+
+
        // public static int get_sparePart_id = 0;
         
 

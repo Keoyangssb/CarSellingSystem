@@ -429,6 +429,53 @@ namespace CarSellingSystem
         }
 
 
+        public void CheckRoleAccess(string formName)
+        {
+            DataTable dt;
+
+            if (globalVariable.g_user_role_id == 1)
+            {
+                globalVariable.can_add = true;
+                globalVariable.can_edit = true;
+                globalVariable.can_view = true;
+                globalVariable.can_delete = true;
+            }
+            else
+            {
+                dt = GetDataTable("Select * From View_Check_Role_Access where roleId = "
+                                  + globalVariable.g_user_role_id + " and menu_name=N'" + formName + "'");
+
+                if (dt.Rows.Count > 0)
+                {
+                    globalVariable.can_add = Convert.ToBoolean(dt.Rows[0]["canAdd"]);
+                    globalVariable.can_edit = Convert.ToBoolean(dt.Rows[0]["canEdit"]);
+                    globalVariable.can_view = Convert.ToBoolean(dt.Rows[0]["canView"]);
+                    globalVariable.can_delete = Convert.ToBoolean(dt.Rows[0]["canDelete"]);
+                }
+                else
+                {
+                    globalVariable.can_add = false;
+                    globalVariable.can_edit = false;
+                    globalVariable.can_view = false;
+                    globalVariable.can_delete = false;
+                }
+            }
+        }
+
+        public void SetControlsEnabled(Control parent, bool enabled)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                ctrl.Enabled = enabled;
+
+                if (ctrl.HasChildren)
+                {
+                    SetControlsEnabled(ctrl, enabled);
+                }
+            }
+        }
+
+
     }
 
 }

@@ -50,6 +50,7 @@
             this.expandablePanel2 = new DevComponents.DotNetBar.ExpandablePanel();
             this.btnExpenseList = new DevComponents.DotNetBar.ButtonX();
             this.expSetting = new DevComponents.DotNetBar.ExpandablePanel();
+            this.btnExpenseCode = new DevComponents.DotNetBar.ButtonX();
             this.btnRoleAccess = new DevComponents.DotNetBar.ButtonX();
             this.btnUser = new DevComponents.DotNetBar.ButtonX();
             this.btnSparePart = new DevComponents.DotNetBar.ButtonX();
@@ -66,7 +67,6 @@
             this.btnReportTotalCashTransfer = new DevComponents.DotNetBar.ButtonX();
             this.tcl = new DevComponents.DotNetBar.TabControl();
             this.ExpandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
-            this.btnExpenseCode = new DevComponents.DotNetBar.ButtonX();
             this.statusStrip1.SuspendLayout();
             this.ExpandablePanel1.SuspendLayout();
             this.FlowLayoutPanel1.SuspendLayout();
@@ -457,7 +457,7 @@
             this.expSetting.Controls.Add(this.frmExchangeRate);
             this.expSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expSetting.Expanded = false;
-            this.expSetting.ExpandedBounds = new System.Drawing.Rectangle(4, 242, 199, 407);
+            this.expSetting.ExpandedBounds = new System.Drawing.Rectangle(4, 77, 199, 407);
             this.expSetting.ExpandOnTitleClick = true;
             this.expSetting.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expSetting.Location = new System.Drawing.Point(4, 242);
@@ -482,6 +482,19 @@
             this.expSetting.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.expSetting.TitleStyle.GradientAngle = 90;
             this.expSetting.TitleText = "ຕັ້ງຄ່າຂໍ້ມູນຫຼັກ";
+            // 
+            // btnExpenseCode
+            // 
+            this.btnExpenseCode.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnExpenseCode.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnExpenseCode.Location = new System.Drawing.Point(4, 254);
+            this.btnExpenseCode.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnExpenseCode.Name = "btnExpenseCode";
+            this.btnExpenseCode.Size = new System.Drawing.Size(188, 46);
+            this.btnExpenseCode.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            this.btnExpenseCode.TabIndex = 18;
+            this.btnExpenseCode.Text = "ຂໍ້ມູນລາຍຈ່າຍລວມ";
+            this.btnExpenseCode.Click += new System.EventHandler(this.btnExpenseCode_Click);
             // 
             // btnRoleAccess
             // 
@@ -574,7 +587,7 @@
             this.expReport.Controls.Add(this.btnReportTotalCashTransfer);
             this.expReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expReport.Expanded = false;
-            this.expReport.ExpandedBounds = new System.Drawing.Rectangle(4, 290, 199, 363);
+            this.expReport.ExpandedBounds = new System.Drawing.Rectangle(4, 169, 199, 363);
             this.expReport.ExpandOnTitleClick = true;
             this.expReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.expReport.Location = new System.Drawing.Point(4, 290);
@@ -740,19 +753,6 @@
             this.ExpandableSplitter1.Size = new System.Drawing.Size(4, 565);
             this.ExpandableSplitter1.TabIndex = 1;
             this.ExpandableSplitter1.TabStop = false;
-            // 
-            // btnExpenseCode
-            // 
-            this.btnExpenseCode.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnExpenseCode.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnExpenseCode.Location = new System.Drawing.Point(4, 254);
-            this.btnExpenseCode.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnExpenseCode.Name = "btnExpenseCode";
-            this.btnExpenseCode.Size = new System.Drawing.Size(188, 46);
-            this.btnExpenseCode.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            this.btnExpenseCode.TabIndex = 18;
-            this.btnExpenseCode.Text = "ຂໍ້ມູນລາຍຈ່າຍລວມ";
-            this.btnExpenseCode.Click += new System.EventHandler(this.btnExpenseCode_Click);
             // 
             // frmMain
             // 

@@ -22,6 +22,29 @@ namespace CarSellingSystem.Expense
         {
             dtFrom.Value = DateTime.Now.AddDays(-7);
             getData();
+            CheckRole();
+        }
+
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnExpenseList");
+
+            if (globalVariable.can_add)
+            {
+                btnAddNew.Visible = true;
+            }
+            else
+            {
+                btnAddNew.Visible = false;
+            }
+            if (globalVariable.can_edit)
+            {
+                btnEdit.Visible = true;
+            }
+            else
+            {
+                btnEdit.Visible = false;
+            }
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)

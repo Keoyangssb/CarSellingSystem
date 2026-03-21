@@ -37,7 +37,37 @@ namespace CarSellingSystem.SparePart
             clear_form();
 
             loadData();
+            CheckRole();
+        }
 
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnSparePart");
+
+            if (globalVariable.can_add)
+            {
+                btnAddNew.Visible = true;
+            }
+            else
+            {
+                btnAddNew.Visible = false;
+            }
+            if (globalVariable.can_edit || globalVariable.can_add)
+            {
+                btnSave.Visible = true;
+            }
+            else
+            {
+                btnSave.Visible = false;
+            }
+            if (globalVariable.can_delete)
+            {
+                btnDelete.Visible = true;
+            }
+            else
+            {
+                btnDelete.Visible = false;
+            }
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)

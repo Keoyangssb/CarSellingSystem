@@ -23,7 +23,39 @@ namespace CarSellingSystem.Customer
         {
             getData();
             clear_form();
+            CheckRole();
         }
+
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnCustomer");
+
+            if (globalVariable.can_add)
+            {
+                btnAddNew.Visible = true;
+            }
+            else
+            {
+                btnAddNew.Visible = false;
+            }
+            if (globalVariable.can_edit || globalVariable.can_add)
+            {
+                btnSave.Visible = true;
+            }
+            else
+            {
+                btnSave.Visible = false;
+            }
+            if (globalVariable.can_delete)
+            {
+                btnDelete.Visible = true;
+            }
+            else
+            {
+                btnDelete.Visible = false;
+            }
+        }
+
 
         private void getData()
         {

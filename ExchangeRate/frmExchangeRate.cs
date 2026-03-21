@@ -22,6 +22,21 @@ namespace CarSellingSystem.ExchangeRate
         {
             getData();
             clear_form();
+            CheckRole();
+        }
+
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("frmExchangeRate");
+
+            if (globalVariable.can_add)
+            {
+                btnSave.Visible = true;
+            }
+            else
+            {
+                btnSave.Visible = false;
+            }
         }
 
         private void clear_form()

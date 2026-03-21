@@ -47,7 +47,24 @@ namespace CarSellingSystem.Cars
             cboCarStatus.SelectedIndex = -1;
 
             getData();
+            CheckRole();
         }
+
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnCarInfo");
+            if (globalVariable.can_edit)
+            {
+                panel1.Enabled = true;
+                btnSave.Visible = true;
+            }
+            else
+            {
+                panel1.Enabled = false;
+                btnSave.Visible = false;
+            }
+        }
+
 
         private void cboMake_search_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -229,7 +246,6 @@ namespace CarSellingSystem.Cars
                         cushion_type = @cushion_type,
                         car_language = @car_language,
                         sale_price = @sale_price,
-                        remarks = @remarks,
                         buy_status_id = @buy_status_id
                         WHERE car_id = @car_id";
 

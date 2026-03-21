@@ -508,6 +508,12 @@
     <Compile Include="Users\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\frmUserRoleAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUserRoleAccess.Designer.cs">
+      <DependentUpon>frmUserRoleAccess.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BuyCar\frmBuyCar.resx">
       <DependentUpon>frmBuyCar.cs</DependentUpon>
     </EmbeddedResource>
@@ -736,6 +742,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserRoleAccess.resx">
+      <DependentUpon>frmUserRoleAccess.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="db_carsDataSet.xsc">
       <DependentUpon>db_carsDataSet.xsd</DependentUpon>

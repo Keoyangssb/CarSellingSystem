@@ -28,6 +28,39 @@ namespace CarSellingSystem.Users
 
             loadData();
             clear_form();
+            CheckRole();
+        }
+
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnCustomer");
+
+            if (globalVariable.can_add)
+            {
+                btnAddNew.Visible = true;
+            }
+            else
+            {
+                btnAddNew.Visible = false;
+            }
+            if (globalVariable.can_edit || globalVariable.can_add)
+            {
+                btnSave.Visible = true;
+                btnNewRole.Visible = true;
+            }
+            else
+            {
+                btnSave.Visible = false;
+                btnNewRole.Visible = false;
+            }
+            if (globalVariable.can_delete)
+            {
+                btnDelete.Visible = true;
+            }
+            else
+            {
+                btnDelete.Visible = false;
+            }
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
@@ -255,6 +288,14 @@ namespace CarSellingSystem.Users
                 conn.Close();
             }
 
+        }
+
+        private void btnNewRole_Click(object sender, EventArgs e)
+        {
+            frmRoleAccess frm = new frmRoleAccess();
+            frm.ShowDialog();
+            db.FillCombo(cboRole_filter, "tbl_user_role", "roleName", "roleId", "", "roleName", true);
+            db.FillCombo(cboRole, "tbl_user_role", "roleName", "roleId", "", "roleName", false);
         }
     }
 }

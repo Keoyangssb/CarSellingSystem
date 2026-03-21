@@ -34,17 +34,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.col_item_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_sell_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_buy_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_currency_buy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_sell_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_currency_sell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_item_del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtName_filter = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -80,6 +69,17 @@
             this.txtSalePrice = new System.Windows.Forms.TextBox();
             this.txtBuyPrice = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.col_item_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_sell_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_buy_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_currency_buy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_sell_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_currency_sell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_item_del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -146,84 +146,6 @@
             this.dgvData.TabIndex = 26;
             this.dgvData.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvData_CellMouseUp);
             // 
-            // col_item_id
-            // 
-            this.col_item_id.HeaderText = "item_id";
-            this.col_item_id.Name = "col_item_id";
-            this.col_item_id.ReadOnly = true;
-            this.col_item_id.Visible = false;
-            // 
-            // col_sell_type
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.col_sell_type.DefaultCellStyle = dataGridViewCellStyle1;
-            this.col_sell_type.HeaderText = "ປະເພດຂາຍ";
-            this.col_sell_type.Name = "col_sell_type";
-            this.col_sell_type.ReadOnly = true;
-            this.col_sell_type.Width = 150;
-            // 
-            // col_type
-            // 
-            this.col_type.HeaderText = "ປະເພດອາໄຫຼ່";
-            this.col_type.Name = "col_type";
-            this.col_type.ReadOnly = true;
-            this.col_type.Width = 150;
-            // 
-            // col_name
-            // 
-            this.col_name.HeaderText = "ຊື່ອາໄຫຼ່";
-            this.col_name.Name = "col_name";
-            this.col_name.ReadOnly = true;
-            this.col_name.Width = 250;
-            // 
-            // col_unit
-            // 
-            this.col_unit.HeaderText = "ຫົວໜ່ວຍ";
-            this.col_unit.Name = "col_unit";
-            this.col_unit.ReadOnly = true;
-            this.col_unit.Width = 80;
-            // 
-            // col_buy_price
-            // 
-            this.col_buy_price.HeaderText = "ລາຄາຊື້";
-            this.col_buy_price.Name = "col_buy_price";
-            this.col_buy_price.ReadOnly = true;
-            // 
-            // col_currency_buy
-            // 
-            this.col_currency_buy.HeaderText = "ສະກຸນເງິນຊື້";
-            this.col_currency_buy.Name = "col_currency_buy";
-            this.col_currency_buy.ReadOnly = true;
-            // 
-            // col_sell_price
-            // 
-            this.col_sell_price.HeaderText = "ລາຄາຂາຍ";
-            this.col_sell_price.Name = "col_sell_price";
-            this.col_sell_price.ReadOnly = true;
-            // 
-            // col_currency_sell
-            // 
-            this.col_currency_sell.HeaderText = "ສະກຸນເງິນຂາຍ";
-            this.col_currency_sell.Name = "col_currency_sell";
-            this.col_currency_sell.ReadOnly = true;
-            // 
-            // col_user
-            // 
-            this.col_user.HeaderText = "ຢູເຊີ";
-            this.col_user.Name = "col_user";
-            this.col_user.ReadOnly = true;
-            // 
-            // col_item_del
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            this.col_item_del.DefaultCellStyle = dataGridViewCellStyle2;
-            this.col_item_del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.col_item_del.HeaderText = "ລົບອອກ";
-            this.col_item_del.Name = "col_item_del";
-            this.col_item_del.ReadOnly = true;
-            this.col_item_del.Width = 72;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.SkyBlue;
@@ -246,7 +168,7 @@
             // 
             this.txtName_filter.Location = new System.Drawing.Point(590, 29);
             this.txtName_filter.Name = "txtName_filter";
-            this.txtName_filter.Size = new System.Drawing.Size(184, 37);
+            this.txtName_filter.Size = new System.Drawing.Size(184, 31);
             this.txtName_filter.TabIndex = 51;
             // 
             // btnSearch
@@ -269,7 +191,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(5, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 29);
+            this.label10.Size = new System.Drawing.Size(76, 24);
             this.label10.TabIndex = 44;
             this.label10.Text = "ປະເພດຂາຍ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -280,7 +202,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Location = new System.Drawing.Point(257, 32);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 29);
+            this.label11.Size = new System.Drawing.Size(83, 24);
             this.label11.TabIndex = 45;
             this.label11.Text = "ປະເພດອາໄຫຼ່";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -291,7 +213,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Location = new System.Drawing.Point(535, 33);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 29);
+            this.label12.Size = new System.Drawing.Size(52, 24);
             this.label12.TabIndex = 46;
             this.label12.Text = "ຊື່ອາໄຫຼ່";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -302,7 +224,7 @@
             this.cboSellType_filter.FormattingEnabled = true;
             this.cboSellType_filter.Location = new System.Drawing.Point(82, 28);
             this.cboSellType_filter.Name = "cboSellType_filter";
-            this.cboSellType_filter.Size = new System.Drawing.Size(170, 37);
+            this.cboSellType_filter.Size = new System.Drawing.Size(170, 32);
             this.cboSellType_filter.TabIndex = 47;
             // 
             // cboType_filter
@@ -311,7 +233,7 @@
             this.cboType_filter.FormattingEnabled = true;
             this.cboType_filter.Location = new System.Drawing.Point(343, 28);
             this.cboType_filter.Name = "cboType_filter";
-            this.cboType_filter.Size = new System.Drawing.Size(189, 37);
+            this.cboType_filter.Size = new System.Drawing.Size(189, 32);
             this.cboType_filter.TabIndex = 48;
             // 
             // groupBox1
@@ -546,7 +468,7 @@
             this.cboType.FormattingEnabled = true;
             this.cboType.Location = new System.Drawing.Point(113, 81);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(407, 37);
+            this.cboType.Size = new System.Drawing.Size(407, 32);
             this.cboType.TabIndex = 1;
             // 
             // cboCurSell
@@ -555,7 +477,7 @@
             this.cboCurSell.FormattingEnabled = true;
             this.cboCurSell.Location = new System.Drawing.Point(389, 228);
             this.cboCurSell.Name = "cboCurSell";
-            this.cboCurSell.Size = new System.Drawing.Size(168, 37);
+            this.cboCurSell.Size = new System.Drawing.Size(168, 32);
             this.cboCurSell.TabIndex = 7;
             // 
             // cboCurBuy
@@ -564,7 +486,7 @@
             this.cboCurBuy.FormattingEnabled = true;
             this.cboCurBuy.Location = new System.Drawing.Point(389, 192);
             this.cboCurBuy.Name = "cboCurBuy";
-            this.cboCurBuy.Size = new System.Drawing.Size(168, 37);
+            this.cboCurBuy.Size = new System.Drawing.Size(168, 32);
             this.cboCurBuy.TabIndex = 5;
             // 
             // cboUnit
@@ -573,7 +495,7 @@
             this.cboUnit.FormattingEnabled = true;
             this.cboUnit.Location = new System.Drawing.Point(113, 153);
             this.cboUnit.Name = "cboUnit";
-            this.cboUnit.Size = new System.Drawing.Size(444, 37);
+            this.cboUnit.Size = new System.Drawing.Size(444, 32);
             this.cboUnit.TabIndex = 3;
             // 
             // cboSellType
@@ -582,7 +504,7 @@
             this.cboSellType.FormattingEnabled = true;
             this.cboSellType.Location = new System.Drawing.Point(113, 45);
             this.cboSellType.Name = "cboSellType";
-            this.cboSellType.Size = new System.Drawing.Size(444, 37);
+            this.cboSellType.Size = new System.Drawing.Size(444, 32);
             this.cboSellType.TabIndex = 0;
             // 
             // label6
@@ -619,26 +541,105 @@
             // 
             this.txtSalePrice.Location = new System.Drawing.Point(113, 226);
             this.txtSalePrice.Name = "txtSalePrice";
-            this.txtSalePrice.Size = new System.Drawing.Size(149, 37);
+            this.txtSalePrice.Size = new System.Drawing.Size(149, 31);
             this.txtSalePrice.TabIndex = 6;
             // 
             // txtBuyPrice
             // 
             this.txtBuyPrice.Location = new System.Drawing.Point(113, 190);
             this.txtBuyPrice.Name = "txtBuyPrice";
-            this.txtBuyPrice.Size = new System.Drawing.Size(149, 37);
+            this.txtBuyPrice.Size = new System.Drawing.Size(149, 31);
             this.txtBuyPrice.TabIndex = 4;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(113, 117);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(444, 37);
+            this.txtName.Size = new System.Drawing.Size(444, 31);
             this.txtName.TabIndex = 2;
+            // 
+            // col_item_id
+            // 
+            this.col_item_id.HeaderText = "item_id";
+            this.col_item_id.Name = "col_item_id";
+            this.col_item_id.ReadOnly = true;
+            this.col_item_id.Visible = false;
+            // 
+            // col_sell_type
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.col_sell_type.DefaultCellStyle = dataGridViewCellStyle1;
+            this.col_sell_type.HeaderText = "ປະເພດຂາຍ";
+            this.col_sell_type.Name = "col_sell_type";
+            this.col_sell_type.ReadOnly = true;
+            this.col_sell_type.Width = 150;
+            // 
+            // col_type
+            // 
+            this.col_type.HeaderText = "ປະເພດອາໄຫຼ່";
+            this.col_type.Name = "col_type";
+            this.col_type.ReadOnly = true;
+            this.col_type.Width = 150;
+            // 
+            // col_name
+            // 
+            this.col_name.HeaderText = "ຊື່ອາໄຫຼ່";
+            this.col_name.Name = "col_name";
+            this.col_name.ReadOnly = true;
+            this.col_name.Width = 250;
+            // 
+            // col_unit
+            // 
+            this.col_unit.HeaderText = "ຫົວໜ່ວຍ";
+            this.col_unit.Name = "col_unit";
+            this.col_unit.ReadOnly = true;
+            this.col_unit.Width = 80;
+            // 
+            // col_buy_price
+            // 
+            this.col_buy_price.HeaderText = "ລາຄາຊື້";
+            this.col_buy_price.Name = "col_buy_price";
+            this.col_buy_price.ReadOnly = true;
+            // 
+            // col_currency_buy
+            // 
+            this.col_currency_buy.HeaderText = "ສະກຸນເງິນຊື້";
+            this.col_currency_buy.Name = "col_currency_buy";
+            this.col_currency_buy.ReadOnly = true;
+            // 
+            // col_sell_price
+            // 
+            this.col_sell_price.HeaderText = "ລາຄາຂາຍ";
+            this.col_sell_price.Name = "col_sell_price";
+            this.col_sell_price.ReadOnly = true;
+            // 
+            // col_currency_sell
+            // 
+            this.col_currency_sell.HeaderText = "ສະກຸນເງິນຂາຍ";
+            this.col_currency_sell.Name = "col_currency_sell";
+            this.col_currency_sell.ReadOnly = true;
+            // 
+            // col_user
+            // 
+            this.col_user.HeaderText = "ຢູເຊີ";
+            this.col_user.Name = "col_user";
+            this.col_user.ReadOnly = true;
+            // 
+            // col_item_del
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+            this.col_item_del.DefaultCellStyle = dataGridViewCellStyle2;
+            this.col_item_del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.col_item_del.HeaderText = "ລົບອອກ";
+            this.col_item_del.Name = "col_item_del";
+            this.col_item_del.ReadOnly = true;
+            this.col_item_del.Visible = false;
+            this.col_item_del.Width = 72;
             // 
             // frmSparePart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1769, 813);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -702,6 +703,7 @@
         private System.Windows.Forms.ComboBox cboType_filter;
         private System.Windows.Forms.TextBox txtName_filter;
         private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.Button btnAddType;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_item_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_sell_type;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_type;
@@ -713,6 +715,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_currency_sell;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_user;
         private System.Windows.Forms.DataGridViewButtonColumn col_item_del;
-        private System.Windows.Forms.Button btnAddType;
     }
 }

@@ -144,11 +144,8 @@ C:\Keo\Projects\CarSellingSystems\CarSellingSystem\bin\Debug\CarSellingSystem.ex
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem\bin\Debug\CarSellingSystem.pdb
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem\obj\Debug\CarSellingSystem.csprojResolveAssemblyReference.cache
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\bin\Debug\CarSellingSystem.exe.config
-C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.exe
-C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.pdb
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\bin\Debug\CarSellingSystem.exe
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\bin\Debug\CarSellingSystem.pdb
-C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.csprojResolveAssemblyReference.cache
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.BuyCar.frmBuyCar.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.BuyCar.frmBuyCarList.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.BuyCar.frmBuyCarPayment.resources
@@ -179,6 +176,7 @@ C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debu
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.Properties.Resources.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmExpenseReport.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmProfitLoseReport.resources
+C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmProfitLoseReport2.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmReportBuyCar.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmReportBuySparePart.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmReportSaleCar.resources
@@ -198,5 +196,7 @@ C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debu
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.Stocks.frmCheckCarBalance.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.Users.frmRoleAccess.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.Users.frmUser.resources
+C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.Users.frmUserRoleAccess.resources
 C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.csproj.GenerateResource.Cache
-C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.ReportForms.frmProfitLoseReport2.resources
+C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.exe
+C:\Keo\Projects\CarSellingSystems\CarSellingSystem_new\CarSellingSystem\obj\Debug\CarSellingSystem.pdb

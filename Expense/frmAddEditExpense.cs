@@ -25,7 +25,37 @@ namespace CarSellingSystem.Expense
             db.FillCombo(cboTypeFilter, "tblExpenseTypeCode", "type_name", "type_id", "", "type_name", true);
             loadData();
             clear_text();
+            CheckRole();
+        }
 
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnExpenseCode");
+
+            if (globalVariable.can_add)
+            {
+                btnAddNew.Visible = true;
+            }
+            else
+            {
+                btnAddNew.Visible = false;
+            }
+            if (globalVariable.can_edit || globalVariable.can_add)
+            {
+                btnSave.Visible = true;
+            }
+            else
+            {
+                btnSave.Visible = false;
+            }
+            if (globalVariable.can_delete)
+            {
+                btnDelete.Visible = true;
+            }
+            else
+            {
+                btnDelete.Visible = false;
+            }
         }
 
         private void loadData()

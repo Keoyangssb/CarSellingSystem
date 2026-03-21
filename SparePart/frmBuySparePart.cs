@@ -31,6 +31,35 @@ namespace CarSellingSystem.SparePart
             {
                 clear_form();
             }
+            CheckRole();
+        }
+
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnBuySparePartList");
+            if (globalVariable.can_add || globalVariable.can_edit)
+            {
+                btnAddNew.Visible = true;
+                btnSave.Visible = true;
+                btnPayment.Visible = true;
+            }
+            else
+            {
+                btnSave.Visible = false;
+                btnPayment.Visible = false;
+                db.SetControlsEnabled(this, false);
+            }
+            if (globalVariable.can_delete)
+            {
+                btnDelete.Visible = true;
+                btnDelete.Enabled = true;
+            }
+            else
+            {
+                btnDelete.Visible = false;
+                btnDelete.Enabled = true;
+            }
+            btnClose.Enabled = true;
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)

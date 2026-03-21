@@ -27,7 +27,51 @@ namespace CarSellingSystem.SaleCar
             db.FillCombo(cboYear, "tbl_years", "year_name", "year_id", "status_id=1", "", true);
 
             getData();
+            CheckRole();
+        }
 
+        private void CheckRole()
+        {
+            db.CheckRoleAccess("btnSaleCarHistory");
+
+            if (globalVariable.can_add)
+            {
+                btnAddNew.Visible = true;
+                btnPayment.Visible = true;
+            }
+            else
+            {
+                btnAddNew.Visible = false;
+                btnPayment.Visible = false;
+            }
+            if (globalVariable.can_edit)
+            {
+                btnEdit.Visible = true;
+                btnPayment.Visible = true;
+            }
+            else
+            {
+                btnEdit.Visible = false;
+                btnPayment.Visible = false;
+            }
+
+            if (globalVariable.can_add || globalVariable.can_edit)
+            {
+                btnPayment.Visible = true;
+            }
+            else
+            {
+                btnPayment.Visible = false;
+            }
+
+            if (globalVariable.can_delete)
+            {
+                dgv_data.Columns["col_item_del"].Visible = true;
+            }
+            else
+            {
+                dgv_data.Columns["col_item_del"].Visible = false;
+            }
         }
 
         private void cboMake_SelectedIndexChanged(object sender, EventArgs e)

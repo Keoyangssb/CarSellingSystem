@@ -30,10 +30,46 @@ namespace CarSellingSystem
             InitializeComponent();
             Instance = this;
         }
-
+        private myClass db = new myClass();
         private void frmMain_Load(object sender, EventArgs e)
         {
+            CheckRoleAccessMain(this.Controls);
             getExc();
+        }
+
+        private void CheckRoleAccessMain(Control.ControlCollection cc)
+        {
+            foreach (Control ctrl in cc)
+            {
+                if (globalVariable.g_user_role_id > 1)
+                {
+                    if (ctrl.GetType() == typeof(ButtonX))
+                    {
+                        string strMenu = ctrl.Name.Trim();
+
+                        db.CheckRoleAccess(strMenu);
+
+                        if (globalVariable.can_view)
+                        {
+                            ctrl.Enabled = true;
+                        }
+                        else
+                        {
+                            ctrl.Enabled = false;
+                        }
+                    }
+                    else
+                    {
+                        ctrl.Enabled = true;
+                    }
+                }
+                else
+                {
+                    ctrl.Enabled = true;
+                }
+
+                CheckRoleAccessMain(ctrl.Controls);
+            }
         }
 
         private void getExc()
@@ -272,8 +308,25 @@ namespace CarSellingSystem
 
         private void frmRoleAccess_Click(object sender, EventArgs e)
         {
-            frmRoleAccess frm = new frmRoleAccess();
-            frm.ShowDialog();
+            if (!CheckForm("frmUserRoleAccess"))
+            {
+                TabItem newTab = tcl.CreateTab("ຂໍ້ມູນ User");
+                newTab.Name = "frmUserRoleAccess";
+
+                TabControlPanel panel = (TabControlPanel)newTab.AttachedControl;
+                panel.Dock = DockStyle.Fill;
+
+                tcl.Refresh();
+                tcl.SelectedTab = newTab;
+
+                frmUserRoleAccess frm = new frmUserRoleAccess();
+                frm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                frm.TopLevel = false;
+
+                panel.Controls.Add(frm);
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)

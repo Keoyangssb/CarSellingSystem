@@ -56,6 +56,7 @@
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cboRole = new System.Windows.Forms.ComboBox();
+            this.btnNewRole = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -182,6 +183,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnNewRole);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnClose);
             this.groupBox2.Controls.Add(this.btnAddNew);
@@ -336,8 +338,21 @@
             this.cboRole.FormattingEnabled = true;
             this.cboRole.Location = new System.Drawing.Point(150, 180);
             this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(362, 32);
+            this.cboRole.Size = new System.Drawing.Size(257, 32);
             this.cboRole.TabIndex = 4;
+            // 
+            // btnNewRole
+            // 
+            this.btnNewRole.BackColor = System.Drawing.Color.DeepPink;
+            this.btnNewRole.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewRole.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewRole.Location = new System.Drawing.Point(413, 178);
+            this.btnNewRole.Name = "btnNewRole";
+            this.btnNewRole.Size = new System.Drawing.Size(99, 37);
+            this.btnNewRole.TabIndex = 12;
+            this.btnNewRole.Text = "ສ້າງໃໝ່ສິດທິ";
+            this.btnNewRole.UseVisualStyleBackColor = false;
+            this.btnNewRole.Click += new System.EventHandler(this.btnNewRole_Click);
             // 
             // frmUser
             // 
@@ -391,5 +406,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnNewRole;
     }
 }
